@@ -6,7 +6,7 @@
 class Scene
 {
   private:
-    Group scene_graph;
+    StaticGroup scene_graph;
     Camera camera;
   public:
 };
