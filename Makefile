@@ -1,4 +1,4 @@
-CC = g++ 
+CC = g++
 CFLAGS = -c -g
 
 INCL = -Isrc
@@ -10,6 +10,6 @@ main: main.o
 clean:
 	rm -f *.o
 
-%.o:  %.cpp
+%.o: %.cpp
 	$(CC) $(CFLAGS) $^ $(INCL)
 
