@@ -5,7 +5,7 @@
 
 class Group : Shape
 {
-  private:
+  protected:
     int number_of_shapes;
     Shape** shapes;
   public:
@@ -18,6 +18,9 @@ class Group : Shape
     virtual Matrix4 get_matrix(void) = 0;
     virtual Matrix4 get_inverse_matrix(void) = 0;
     virtual Matrix4 get_normal_matrix(void) = 0;
+
+    void setup_OpenGL(void) = 0;
+    void draw(void) = 0;
 };
 
 class StaticGroup : Group
@@ -34,5 +37,8 @@ class StaticGroup : Group
     Matrix4 get_normal_matrix(void);
 
     bool is_static(void);
+
+    void setup_OpenGL(void);
+    void draw(void);
 };
 
