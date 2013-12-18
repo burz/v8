@@ -5,13 +5,18 @@
 class Camera
 {
   private:
+    double height_angle;
+    double aspect_ratio;
     Vector3 position;
     Vector3 direction;
     Vector3 up;
+    Vector3 right;
   public:
-    void move(double x, double y, double z);
-    void move(const Vector3& v);
-    void rotate(double x, double y, double z);
-    void rotate(const Vector3& r);
+    void rotate_forward(double angle);
+    void rotate_up(double angle);
+    void rotate_right(double angle);
+    void move_forward(double distance);
+    void move_up(double distance);
+    void move_right(double distance);
 };
 
