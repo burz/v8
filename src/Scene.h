@@ -65,7 +65,7 @@ class Scene
     Light* lights;
     Vector3 ambient;
     Vector3 background;
-    Camera camera;
+    Camera* camera;
     StaticGroup scene_graph;
   public:
     Scene(void);
