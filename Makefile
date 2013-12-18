@@ -6,7 +6,8 @@ GL_LIBS = -lGL -lglut -lGLU
 
 VPATH += src/
 FILES = \
-  Vector.o
+  Vector.o \
+  Matrix.o
 
 main: main.o $(FILES)
 	$(CC) -o v8 $^ $(GL_LIBS)
