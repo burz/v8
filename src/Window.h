@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Scene.h"
+#include "Mouse.h"
 
 class Window
 {
@@ -25,6 +26,6 @@ class Window
     virtual void special_function(int key, int x, int y) = 0;
 
     void setup_OpenGL(void);
-    void draw(void) { scene.draw() };
+    void draw(void) { scene.draw(); }
 };
 

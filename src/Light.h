@@ -1,11 +1,12 @@
 #pragma once
 
 #include "libs.h"
+#include "Vector.h"
 
 class Light
 {
   public:
-    Point3D color;
+    Vector3 color;
 
     virtual void draw(GLuint light_handle);
 };

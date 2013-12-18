@@ -19,8 +19,8 @@ class Group : Shape
     virtual Matrix4 get_inverse_matrix(void) = 0;
     virtual Matrix4 get_normal_matrix(void) = 0;
 
-    void setup_OpenGL(void) = 0;
-    void draw(void) = 0;
+    virtual void setup_OpenGL(void) = 0;
+    virtual void draw(void) = 0;
 };
 
 class StaticGroup : Group
