@@ -16,6 +16,8 @@ class Vertex
 
 class Material
 {
+  private:
+    static unsigned int new_handle;
   public:
     int handle;
     Vector3 ambient;
@@ -66,7 +68,7 @@ class Scene
     Vector3 ambient;
     Vector3 background;
     Camera* camera;
-    StaticGroup scene_graph;
+//    StaticGroup scene_graph;
 
     Scene(void);
     ~Scene(void);

@@ -8,7 +8,7 @@
 class Window
 {
   private:
-    Mouse mouse;
+//    Mouse mouse;
     Vector3 center_of_bounding_box;
     double radius_of_bounding_box;
     bool visible;
@@ -27,6 +27,6 @@ class Window
     static void keyboard_function(unsigned char c, int x, int y);
     static void special_function(int key, int x, int y);
 
-    void run_scene(Scene *scene, int height, int width);
+    void run_scene(Scene *scene, int width, int height);
 };
 

@@ -1,3 +1,4 @@
+#include "libs.h"
 #include "Window.h"
 
 void Window::idle_function(void)

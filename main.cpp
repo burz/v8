@@ -1,7 +1,15 @@
-#include "Window.h"
+#include <stdio.h>
 
-int main(void)
+#include "Window.h"
+#include "Scene.h"
+
+int main(int argc, char* argv[])
 {
+  Window w;
+  Scene s;
+
+  w.run_scene(&s, 100, 100);
+
   return 0;
 }
 
