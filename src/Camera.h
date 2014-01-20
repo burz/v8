@@ -18,5 +18,7 @@ class Camera
     void move_forward(double distance);
     void move_up(double distance);
     void move_right(double distance);
+
+    void draw(void);
 };
 

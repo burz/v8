@@ -19,7 +19,7 @@ class Material
   private:
     static unsigned int new_handle;
   public:
-    int handle;
+    unsigned int handle;
     Vector3 ambient;
     Vector3 diffuse;
     Vector3 specular;
@@ -44,11 +44,9 @@ class Intersection
 
 class Texture
 {
-  public:
-    int handle;
+  private:
     GLuint gl_handle;
-
-    Texture(void);
+  public:
     ~Texture(void);
 
     void setup_OpenGL(void);
@@ -64,7 +62,7 @@ class Scene
     Vertex* vertices;
     Material* materials;
     Texture* textures;
-    Light* lights;
+    Light** lights;
     Vector3 ambient;
     Vector3 background;
     Camera* camera;

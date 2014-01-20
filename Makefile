@@ -16,6 +16,7 @@ FILES = \
   Matrix.o \
   Window.o \
   Scene.o \
+  Camera.o \
   Mouse.o
 
 main: main.o $(FILES)
