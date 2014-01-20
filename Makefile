@@ -5,7 +5,7 @@ INCL = -Isrc
 
 OS_NAME := $(shell uname -s)
 ifeq ($(OS_NAME), Darwin)
-  GL_LIBS = -frameworkGL -frameworkglut -frameworkGLU
+  GL_LIBS = -framework OpenGL -framework GLUT
 else
   GL_LIBS = -lGL -lglut -lGLU
 endif
