@@ -54,7 +54,7 @@ class Texture
 
 class Scene
 {
-  private:
+  public:
     int number_of_vertices;
     int number_of_materials;
     int number_of_textures;
@@ -67,7 +67,7 @@ class Scene
     Vector3 background;
     Camera* camera;
     StaticGroup scene_graph;
-  public:
+
     Scene(void);
     ~Scene(void);
 

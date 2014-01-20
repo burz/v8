@@ -13,7 +13,8 @@ endif
 VPATH += src/
 FILES = \
   Vector.o \
-  Matrix.o
+  Matrix.o \
+  Window.o
 
 main: main.o $(FILES)
 	$(CC) -o v8 $^ $(GL_LIBS)
