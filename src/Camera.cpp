@@ -1,3 +1,4 @@
+#include "libs.h"
 #include "Camera.h"
 
 void Camera::rotate_forward(double angle)
