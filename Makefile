@@ -17,6 +17,7 @@ FILES = \
   Window.o \
   Scene.o \
   Camera.o \
+  Light.o \
   Mouse.o
 
 main: main.o $(FILES)

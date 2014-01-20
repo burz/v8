@@ -8,7 +8,7 @@ class Light
   public:
     Vector3 color;
 
-    virtual void draw(GLuint light_handle);
+    virtual void draw(GLuint light_handle) = 0;
 };
 
 class DirectionalLight : public Light
