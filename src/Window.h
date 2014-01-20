@@ -8,7 +8,7 @@
 class Window
 {
   private:
-//    Mouse mouse;
+    Mouse mouse;
     Vector3 center_of_bounding_box;
     double radius_of_bounding_box;
     bool visible;

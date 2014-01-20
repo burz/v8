@@ -15,7 +15,8 @@ FILES = \
   Vector.o \
   Matrix.o \
   Window.o \
-  Scene.o
+  Scene.o \
+  Mouse.o
 
 main: main.o $(FILES)
 	$(CC) -o v8 $^ $(GL_LIBS)

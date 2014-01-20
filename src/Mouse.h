@@ -6,7 +6,7 @@ class Mouse
 {
   public:
     int shift;
-    int control;
+    int ctrl;
     int alt;
     int left_button;
     int middle_button;
@@ -20,6 +20,6 @@ class Mouse
     Mouse(void);
 
     void update(int button, int state, int x, int y);
-    Vector3 move(int x, int y);
+    Vector2 move(int x, int y);
 };
 
