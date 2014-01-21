@@ -14,6 +14,6 @@ class Shape
     virtual bool is_static(void) { return 1; }
 
     virtual void setup_OpenGL(void) = 0;
-    virtual void draw(void) = 0;
+    virtual int draw(int last_material) = 0;
 };
 

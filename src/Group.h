@@ -3,7 +3,7 @@
 #include "Shape.h"
 #include "Matrix.h"
 
-class Group : Shape
+class Group : public Shape
 {
   protected:
     int number_of_shapes;
@@ -20,10 +20,10 @@ class Group : Shape
     virtual Matrix4 get_normal_matrix(void) = 0;
 
     virtual void setup_OpenGL(void) = 0;
-    virtual void draw(void) = 0;
+    virtual int draw(int last_material);
 };
 
-class StaticGroup : Group
+class StaticGroup : public Group
 {
   private:
     Matrix4 transformation;
@@ -39,6 +39,6 @@ class StaticGroup : Group
     bool is_static(void);
 
     void setup_OpenGL(void);
-    void draw(void);
+    int draw(int last_material);
 };
 

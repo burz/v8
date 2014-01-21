@@ -19,6 +19,7 @@ FILES = \
   Camera.o \
   Light.o \
   BoundingBox.o \
+  Group.o \
   Mouse.o
 
 main: main.o $(FILES)

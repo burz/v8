@@ -4,9 +4,9 @@
 
 class Matrix3
 {
-  private:
-    double m[3][3];
   public:
+    double m[3][3];
+
     Matrix3(void);
 
     static Matrix3 Identity(void);
@@ -35,9 +35,9 @@ class Matrix3
 
 class Matrix4
 {
-  private:
-    double m[4][4];
   public:
+    double m[4][4];
+
     Matrix4(void);
 
     static Matrix4 Identity(void);

@@ -6,9 +6,9 @@
 
 class BoundingBox3
 {
-  private:
-    Vector3 p[2];
   public:
+    Vector3 p[2];
+
     BoundingBox3(void);
 
     BoundingBox3(const Vector3& u, const Vector3& v);
