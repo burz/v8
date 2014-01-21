@@ -6,7 +6,8 @@
 class Light
 {
   public:
-    Vector3 color;
+    Vector3 diffuse;
+    Vector3 specular;
 
     virtual void draw(GLuint light_handle) = 0;
 };
@@ -38,7 +39,7 @@ class SpotLight : public Light
     double constant_attenuation;
     double linear_attenuation;
     double quadratic_attenuation;
-    double cut_off_rate;
+    double cut_off_angle;
     double drop_off_rate;
 
     void draw(GLuint light_handle);
