@@ -33,15 +33,6 @@ class Material
     void draw(void);
 };
 
-class Intersection
-{
-  public:
-    Material *material;
-    Vector3 coordinates;
-    Vector3 normal;
-    Vector3 texture_coordinate;
-};
-
 class Texture
 {
   private:
