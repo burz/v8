@@ -9,6 +9,7 @@ class Window
 {
   private:
     static Mouse mouse;
+    static Scene* current_scene;
     static Vector3 center_of_bounding_box;
     static double radius_of_bounding_box;
     static bool visible;

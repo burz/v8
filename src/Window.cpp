@@ -6,6 +6,7 @@
 #define ESCAPE_KEY '\033'
 
 Mouse Window::mouse;
+Scene* Window::current_scene = NULL;
 Vector3 Window::center_of_bounding_box;
 double Window::radius_of_bounding_box;
 bool Window::visible;
@@ -24,6 +25,11 @@ void Window::visibility_function(int state)
 
 void Window::display_function(void)
 {
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+  current_scene->draw();
+
+  glutSwapBuffers();
 }
 
 void Window::mouse_function(int button, int state, int x, int y)
@@ -33,6 +39,9 @@ void Window::mouse_function(int button, int state, int x, int y)
 
 void Window::motion_function(int x, int y)
 {
+  Vector2 distance = mouse.move(x, y);
+
+  glutPostRedisplay();
 }
 
 void Window::passive_motion_function(int x, int y)
@@ -55,58 +64,14 @@ void Window::keyboard_function(unsigned char c, int x, int y)
 
 void Window::special_function(int key, int x, int y)
 {
-  switch(key) {
-    case GLUT_KEY_F1:
-      break;
-    case GLUT_KEY_F2:
-      break;
-    case GLUT_KEY_F3:
-      break;
-    case GLUT_KEY_F4:
-      break;
-    case GLUT_KEY_F5:
-      break;
-    case GLUT_KEY_F6:
-      break;
-    case GLUT_KEY_F7:
-      break;
-    case GLUT_KEY_F8:
-      break;
-    case GLUT_KEY_F9:
-      break;
-    case GLUT_KEY_F10:
-      break;
-    case GLUT_KEY_F11:
-      break;
-    case GLUT_KEY_F12:
-      break;
-    case GLUT_KEY_UP:
-      break;
-    case GLUT_KEY_DOWN:
-      break;
-    case GLUT_KEY_LEFT:
-      break;
-    case GLUT_KEY_RIGHT:
-      break;
-    case GLUT_KEY_PAGE_UP:
-      break;
-    case GLUT_KEY_PAGE_DOWN:
-      break;
-    case GLUT_KEY_HOME:
-      break;
-    case GLUT_KEY_END:
-      break;
-    case GLUT_KEY_INSERT:
-      break;
-  }
-
-  glutPostRedisplay();
 }
 
 void Window::run_scene(Scene* scene, int width, int height)
 {
   int argc = 1;
   char* argv[] = { (char*) "a" };
+
+  current_scene = scene;
 
   time(&start_time);
 

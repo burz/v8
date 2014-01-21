@@ -57,7 +57,7 @@ class Scene
     Vector3 ambient;
     Vector3 background;
     Camera* camera;
-//    StaticGroup scene_graph;
+    StaticGroup scene_graph;
 
     Scene(void);
     ~Scene(void);
