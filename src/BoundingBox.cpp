@@ -1,5 +1,9 @@
 #include "BoundingBox.h"
 
+BoundingBox3::BoundingBox3(void)
+{
+}
+
 BoundingBox3::BoundingBox3(const Vector3& u, const Vector3& v)
 {
   p[0] = Vector3(u[0] < v[0] ? u[0] : v[0],
@@ -53,7 +57,7 @@ BoundingBox3 BoundingBox3::operator+(const BoundingBox3& box) const
   return result;
 }
 
-BoundingBox3 BoundingBox3::operator+=(const BoundingBox3& box)
+BoundingBox3& BoundingBox3::operator+=(const BoundingBox3& box)
 {
   BoundingBox3 result;
 
@@ -72,7 +76,9 @@ BoundingBox3 BoundingBox3::operator+=(const BoundingBox3& box)
     }
   }
 
-  return result;
+  *this = result;
+
+  return *this;
 }
 
 BoundingBox3 BoundingBox3::transform(const Matrix4& matrix) const

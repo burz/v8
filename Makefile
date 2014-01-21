@@ -18,6 +18,7 @@ FILES = \
   Scene.o \
   Camera.o \
   Light.o \
+  BoundingBox.o \
   Mouse.o
 
 main: main.o $(FILES)
