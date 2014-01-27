@@ -85,6 +85,6 @@ void Scene::draw(void)
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
 
-  scene_graph.draw(-1);
+  scene_graph->draw(-1);
 }
 
